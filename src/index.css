@@ -62,13 +62,23 @@ nav > img{
 
 .card{
   font-family: "Poppins";
-  padding: 0 0 0 37px;
+  padding: 0 0 30px 37px;
   font-size: 12px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+  position: relative;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .katie{
   max-width: 176px;
   border-radius: 9px;
+  padding-bottom: 10px;
 }
 
 .rating{
@@ -88,10 +98,16 @@ nav > img{
   font-size: 12px;
   line-height: 110%;
   color: #222222;
+  padding: 0
 }
 
 .rating > p > span {
+  color: black;
   font-weight: bold;
+}
+
+.price{
+  margin: 0;
 }
 
 .price > span{
@@ -104,4 +120,27 @@ nav > img{
   /* identical to box height, or 13px */
 
   color: #222222;
+}
+
+.stats{
+  color: grey;
+  padding: 0;
+  margin: 0;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 45px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }

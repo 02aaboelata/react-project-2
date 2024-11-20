@@ -8,15 +8,16 @@ import './App.css';
 
 const experiences = data.map(exp => 
   <Card 
-    id={exp.id}
-    title = {exp.title}
-    description={exp.description}
-    price={exp.price}
-    coverImg={exp.coverImg}
-    rating={exp.stats.rating}
-    reviewCount={exp.stats.reviewCount}
-    location={exp.location}
-    openSpots={exp.openSpots} 
+    key={exp.id}
+    item = {exp}
+    // title = {exp.title}
+    // description={exp.description}
+    // price={exp.price}
+    // coverImg={exp.coverImg}
+    // rating={exp.stats.rating}
+    // reviewCount={exp.stats.reviewCount}
+    // location={exp.location}
+    // openSpots={exp.openSpots} 
   />
 )
 
@@ -25,7 +26,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      {experiences}
+      <section className="cards-list">
+        {experiences}
+      </section>
     </div>
   )
 }
